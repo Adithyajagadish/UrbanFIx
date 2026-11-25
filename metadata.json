@@ -1,0 +1,6 @@
+{
+  "name": "UrbanFix — AI Home Diagnosis & Service Marketplace",
+  "description": "Multimodal AI home repair diagnosis in Kannada, Hindi, and English with fair price estimates, safety risk alerts, pin-drop radius matching, and verified technicians.",
+  "requestFramePermissions": ["microphone", "camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #f8fafc;
+    background-color: #0b0b10;
+    letter-spacing: 0.005em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.bg-obsidian-glow {
+  background-color: #0b0b10;
+  background-image:
+    radial-gradient(ellipse 75% 42% at 50% 0%, rgba(124, 92, 255, 0.24), transparent 72%),
+    radial-gradient(ellipse 45% 30% at 85% 15%, rgba(99, 102, 241, 0.12), transparent 70%);
+}
+
+.surface-card {
+  background-color: #14141d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.surface-elevated {
+  background-color: #1c1c27;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-violet-primary {
+  background: linear-gradient(135deg, #7c5cff 0%, #9b7bff 55%, #b296ff 100%);
+  box-shadow: 0 8px 24px -4px rgba(124, 92, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.btn-violet-primary:hover {
+  filter: brightness(1.06);
+}

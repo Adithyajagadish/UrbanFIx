@@ -1,0 +1,130 @@
+import type { ServiceCatalogItem, ServiceCategoryId } from '../types.ts';
+
+export const SERVICES_CATALOG: ServiceCatalogItem[] = [
+  {
+    id: 'ac_appliance',
+    name: 'AC & Appliance Repair',
+    shortName: 'AC & Appliance',
+    tagline: 'Split/window AC servicing, inverter PCB, fridge & washer repair',
+    image: '/src/assets/images/hero_ac_technician_1795599153324.jpg',
+    baseVisitFeeInr: 299,
+    typicalTime: '45–90 mins',
+    commonProblems: [
+      'AC not cooling / blowing warm air',
+      'Water dripping from indoor unit',
+      'Loud rattling or outdoor fan noise',
+      'Musty or burnt smell from vents',
+      'AC unit not powering on / PCB trip',
+      'Refrigerator or washing machine fault',
+    ],
+  },
+  {
+    id: 'plumbing',
+    name: 'Plumbing & Bath Fittings',
+    shortName: 'Plumbing',
+    tagline: 'Leak detection, concealed pipe joints, drains, taps & geysers',
+    image: '/src/assets/images/hero_plumbing_repair_1795599154410.jpg',
+    baseVisitFeeInr: 199,
+    typicalTime: '30–75 mins',
+    commonProblems: [
+      'Leaking pipe or under-sink P-trap',
+      'Clogged kitchen or bathroom drain',
+      'Dripping mixer tap or angle valve',
+      'Low water pressure in shower',
+      'Toilet flush tank continuously running',
+      'Water heater / geyser inlet leak',
+    ],
+  },
+  {
+    id: 'electrical',
+    name: 'Electrical & Wiring',
+    shortName: 'Electrical',
+    tagline: 'MCB panels, short circuits, earthing, fans, switches & UPS',
+    image: '/src/assets/images/hero_electrician_panel_1795599154354.jpg',
+    baseVisitFeeInr: 199,
+    typicalTime: '30–60 mins',
+    commonProblems: [
+      'MCB / RCCB tripping repeatedly',
+      'Sparking or scorched power socket',
+      'Ceiling fan humming or not spinning',
+      'Inverter / UPS backup failure',
+      'Flickering lights or loose neutral',
+      'Mild electric shock on metal appliance',
+    ],
+  },
+  {
+    id: 'carpentry',
+    name: 'Carpentry & Hardware',
+    shortName: 'Carpentry',
+    tagline: 'Cabinet hinges, swollen doors, locks, drawer channels & mounts',
+    image: '/src/assets/images/hero_carpentry_craft_1795599154747.jpg',
+    baseVisitFeeInr: 249,
+    typicalTime: '45–90 mins',
+    commonProblems: [
+      'Sagging kitchen cabinet or wardrobe hinge',
+      'Swollen wooden door scraping frame',
+      'Telescopic drawer channel jammed',
+      'Main door mortise lock or latch stuck',
+      'Loose bed frame or dining chair joint',
+      'Heavy shelf or TV bracket mounting',
+    ],
+  },
+  {
+    id: 'cleaning_pest',
+    name: 'Deep Cleaning & Pest Control',
+    shortName: 'Cleaning & Pest',
+    tagline: 'Kitchen degreasing, bathroom descaling & herbal pest treatment',
+    baseVisitFeeInr: 399,
+    typicalTime: '90–150 mins',
+    commonProblems: [
+      'Heavy kitchen chimney & tile grease',
+      'Stubborn bathroom hard-water scale',
+      'Cockroach & kitchen ant infestation',
+      'Termite mud tubes or wood dust',
+      'Sofa & mattress deep extraction',
+      'Balcony & window track sanitization',
+    ],
+  },
+  {
+    id: 'painting',
+    name: 'Painting & Waterproofing',
+    shortName: 'Painting',
+    tagline: 'Damp wall treatment, seepage sealing, putty & texture touch-ups',
+    baseVisitFeeInr: 299,
+    typicalTime: '60–180 mins',
+    commonProblems: [
+      'Wall dampness & bubbling paint',
+      'Ceiling water seepage stains',
+      'Hairline plaster & corner cracks',
+      'Peeling exterior emulsion',
+      'Wood polish & melamine touch-up',
+      'Single-wall or room accent repaint',
+    ],
+  },
+];
+
+export const SERVICE_MAP: Record<ServiceCategoryId, ServiceCatalogItem> = {
+  ac_appliance: SERVICES_CATALOG[0],
+  plumbing: SERVICES_CATALOG[1],
+  electrical: SERVICES_CATALOG[2],
+  carpentry: SERVICES_CATALOG[3],
+  cleaning_pest: SERVICES_CATALOG[4],
+  painting: SERVICES_CATALOG[5],
+};
+
+export const PROVIDER_CERTIFICATION_OPTIONS = [
+  'ITI Certified Technician',
+  'R32 / R410A Refrigerant Handling',
+  'Licensed Wireman (Class A/B)',
+  'Plumbing & Sanitary Guild Verified',
+  'Bosch / LG Authorized Service Trained',
+  'Background & Police Verified',
+  'Electrical Safety & Lockout Trained',
+];
+
+export const DEFAULT_LOCATION = {
+  lat: 12.9716,
+  lng: 77.5946,
+  address: 'Indiranagar 100 Feet Rd, Bengaluru, Karnataka 560038',
+  radiusKm: 6,
+};
